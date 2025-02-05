@@ -1,13 +1,35 @@
-
-import { initParticlesJS, makeConfetti } from "./scripts/functions";
+import confetti from 'canvas-confetti';
+import { initParticlesJS } from "./scripts/functions";
 import 'lazysizes';
 
 initParticlesJS();
 
+let calls = 0, intervalId = null, intervalConfettiId = null;
+function makeConfetti() {
+    let myCanvas = document.querySelector('#my-canvas');
+    var myConfetti = confetti.create(myCanvas, {
+        resize: true,
+        useWorker: true
+    });
+    myConfetti({
+        angle: randomInRange(80, 110),
+        particleCount: 500,
+        spread: 160
+    });
+    calls++;
+    if (calls >= 5) {
+        clearInterval(intervalConfettiId);
+    }
+}
+
+function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
 function updateCountdown() {
     // Specific birthday on February 6th
     const now = new Date();
-    const birthdayDate = new Date(now.getFullYear(), 1, 6); // Note: Month is 0-indexed
+    const birthdayDate = new Date(now.getFullYear(), 1, 5, 19, 50, 0); // Note: Month is 0-indexed
 
     const totalSeconds = (birthdayDate - now) / 1000;
     let days = 0, hours = 0, minutes = 0, seconds = 0;
@@ -28,10 +50,10 @@ function updateCountdown() {
     if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
         clearInterval(intervalId);
         document.getElementById('message').innerHTML = "Happy Birthday <span class='mylove'>GHIZLANE</span>! 🎉🎂";
-        makeConfetti();
+        intervalConfettiId = setInterval(makeConfetti, 1000);
     }
 }
 
 // Update countdown every second
 updateCountdown();
-const intervalId = setInterval(updateCountdown, 1000);
+intervalId = setInterval(updateCountdown, 1000);
