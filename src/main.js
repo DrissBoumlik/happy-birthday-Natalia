@@ -18,6 +18,7 @@ function makeConfetti() {
     });
     calls++;
     if (calls >= 5) {
+        clearInterval(intervalId);
         clearInterval(intervalConfettiId);
     }
 }
@@ -50,7 +51,7 @@ function updateCountdown() {
     if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
         clearInterval(intervalId);
         document.getElementById('message').innerHTML = "Happy Birthday <span class='mylove'>GHIZLANE</span>! 🎉🎂";
-        intervalConfettiId = setInterval(makeConfetti, 1000);
+        intervalConfettiId = setInterval(makeConfetti, 3000);
     }
 }
 
