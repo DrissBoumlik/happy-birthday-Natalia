@@ -1,3 +1,4 @@
+import confetti from 'canvas-confetti';
 import particlesJson from '@/plugins/particles/particles.min.json';
 
 
@@ -30,6 +31,23 @@ function initDarkMode(selector) {
     });
 }
 
+function makeConfetti() {
+    let myCanvas = document.querySelector('#my-canvas');
+    var myConfetti = confetti.create(myCanvas, {
+        resize: true,
+        useWorker: true
+    });
+    myConfetti({
+        angle: randomInRange(80, 110),
+        particleCount: 500,
+        spread: 160
+    });
+}
+
+function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
 function toggleDarkMode(element, classes, cookieData) {
     if (element.classList.contains(classes.lightmode)) {
         element.classList.add(...classes.darkmode.split(' '));
@@ -44,4 +62,4 @@ function toggleDarkMode(element, classes, cookieData) {
 
 
 
-export { initDarkMode, initParticlesJS };
+export { initDarkMode, initParticlesJS, randomInRange, makeConfetti };

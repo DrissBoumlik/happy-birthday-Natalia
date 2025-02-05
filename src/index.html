@@ -7,31 +7,31 @@
 
 <body class="dark-mode">
 	<div id="app">
-		<div class="wrapper">
-			<div id="about" class="about section-wrapper py-md-5rem py-3rem">
-				<%- include('views/sections/about-header.ejs') -%>
-			</div>
-			<div id="page-wide" class="page page-wide container-fluid py-5 px-2">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-							<%- include('views/sections/greeting.ejs') -%>
-							<div class="sections">
-								<%- include('views/sections/section1.ejs') -%>
-								<%- include('views/sections/section2.ejs') -%>
-								<%- include('views/sections/section3.ejs') -%>
-								<%- include('views/sections/section4.ejs') -%>
-								<%- include('views/partials/lets-connect.ejs') -%>
-							</div>
-						</div>
-					</div>
+		<div class="container">
+			<h1>Countdown to Your Birthday!</h1>
+			<div id="countdown">
+				<div class="time-block">
+					<span id="days">00</span>
+					<p>Days</p>
+				</div>
+				<div class="time-block">
+					<span id="hours">00</span>
+					<p>Hours</p>
+				</div>
+				<div class="time-block">
+					<span id="minutes">00</span>
+					<p>Minutes</p>
+				</div>
+				<div class="time-block">
+					<span id="seconds">00</span>
+					<p>Seconds</p>
 				</div>
 			</div>
-			<%- include('views/layout/footer') -%>
+			<h2 id="message" class="message"></h2>
 		</div>
-		<%- include('views/partials/darkmode-btn') -%>
 	</div>
 	<script type="module" src="main.js"></script>
+	<canvas id="my-canvas" class="my-canvas" height="100%" width="100%"></canvas>
 </body>
 
 </html>
