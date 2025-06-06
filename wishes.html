@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Birthday Natalia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: linear-gradient(135deg, #000000, #4ecdc4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .slider {
+            width: 600px;
+            height: 350px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .nav-buttons {
+            position: absolute;
+            top: 50%;
+            width: 640px;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .nav-buttons button {
+            background: #6c63ff;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(108, 99, 255, 0.4);
+            transition: background 0.3s ease;
+
+        }
+
+        .nav-buttons button:hover {
+            background: #574fd6;
+        }
+        
+.balloon {
+    position: absolute;
+    width: 400px; 
+    height: 650px; 
+    bottom: 0;
+}
+.balloon1 {
+    right: 0;
+}
+
+.balloon2 {
+    left: 0;
+}
+    </style>
+</head>
+
+<body>
+	<div class="balloon2 balloon">
+		<img src="/natalia-happy-bd/assets/cat-BvDW8HX5.webp" style="width: 100%;" alt="">
+	</div>
+	<div class="balloon1 balloon">
+		<img src="/natalia-happy-bd/assets/m2i8K9m2G6H7G6b1-B6-aG_hx.webp" style="width: 100%;" alt="">
+	</div>
+    <div class="slider">
+        <div class="slides" id="slides">
+            <div class="slide">
+                <div class="message">Happy birthday, Natalia. I wish you a lovely birthday, and a year full of
+                    happiness, success and joy.
+                    I’m personally so fortunate to have you as a close friend. 🥹 Take care of yourself and stay safe.!
+                </div>
+                <div class="name">- Firas</div>
+            </div>
+            <div class="slide">
+                <div class="message">To a Lovely Soul, like no other.. Wish you all happiness in the world 💖.. Fii
+                    Binecuvântat! Happy Birthday Natalia! :) Love Pam x</div>
+                <div class="name">- King Pam</div>
+            </div>
+            <div class="slide">
+                <div class="message">I wish you lots of love 💖, lots of money 💵, I am happy to have the chance to meet
+                    you! 😘</div>
+                <div class="name">- Tia</div>
+            </div>
+            <div class="slide">
+                <div class="message">Happy Birthday Natalia🥳🎂🎊<br />Wishing you a day full of joy, love, and
+                    laughter. May this year bring you great things ☺️</div>
+                <div class="name">- Illy</div>
+            </div>
+
+            <div class="slide">
+                <div class="message" style="margin: 0;">
+                    <video src="/natalia-happy-bd/assets/abhik-D-Pb6Y8U.mp4" style="height: 350px; width: 200px;" controls></video>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="message">Wishing you a fabulous birthday filled with laughter, love, and all your favorite
+                    things. So grateful to have you as my online friend</div>
+                <div class="name">- DB</div>
+            </div>
+            <div class="slide">
+                <div class="message">Here it is - "La mulți ani, Natty Nat Nats. You are very dear to us all, and we've shared some great times on HPG since you arrived on assignment from the FSB. I remember our first chat, with Api,. Have a wonderful day and I hope your back is ok. Penblwydd Hapus. Rhun (and the sheep)"</div>
+                <div class="name">- Rhun</div>
+            </div>
+            <div class="slide">
+                <div class="message">Black cat with white paws, Always there never too far 🎂 <br/>Happy birthday you!</div>
+                <div class="name">- Vishak</div>
+            </div>
+            <div class="slide">
+                <div class="message">-------- 🎂 <br/>Happy birthday you!</div>
+                <div class="name">- Ree</div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-buttons">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script>
+        let currentIndex = -3;
+        const slides = document.getElementById('slides');
+        const totalSlides = slides.children.length;
+        console.log(totalSlides);
+        updateSlidePosition()
+
+        function updateSlidePosition() {
+            slides.style.transform = 'translateX(' + (-(currentIndex - 1) * 100) + '%)';
+        }
+
+        function nextSlide() {
+            currentIndex++;
+            updateSlidePosition();
+        }
+
+        function prevSlide() {
+            currentIndex--;
+            updateSlidePosition();
+        }
+
+    </script>
+</body>
+
+</html>
