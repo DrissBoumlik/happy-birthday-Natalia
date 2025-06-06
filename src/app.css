@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #000000, #4ecdc4);
+    background-image: linear-gradient(135deg, #000000, #4ecdc4);
     color: white;
     text-align: center;
     overflow: hidden;
@@ -64,4 +64,17 @@ body {
 .message {
     font-size: 3rem;
     margin-bottom: 2rem;
+}
+.balloon {
+    position: absolute;
+    width: 400px; 
+    height: 650px; 
+    bottom: 0;
+}
+.balloon1 {
+    right: 0;
+}
+
+.balloon2 {
+    left: 0;
 }
