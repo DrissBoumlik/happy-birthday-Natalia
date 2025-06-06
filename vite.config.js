@@ -8,7 +8,10 @@ export default defineConfig({
     build: {
         outDir: '../dist',
         rollupOptions: {
-            input: 'src/index.html',
+            input: {
+                main: resolve(__dirname, 'src/index.html'),
+                wishes: resolve(__dirname, 'src/wishes.html'),
+            },
         },
     },
     base: '/natalia-happy-bd/',
