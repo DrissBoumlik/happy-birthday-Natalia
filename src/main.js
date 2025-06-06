@@ -29,7 +29,7 @@ function randomInRange(min, max) {
 
 
 document.getElementById('cat').addEventListener('click', function boom() {
-    this.querySelector('img').src = "assets/img/cat2.webp";
+    this.querySelector('img').src = window.location.href + "assets/img/cat2.webp";
     offset = 20;
     updateCountdown();
     document.getElementById('days').textContent = '00';
@@ -63,8 +63,8 @@ function updateCountdown() {
 
     if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
         clearInterval(intervalId);
-        document.getElementById('message').innerHTML = `Happy Birthday <span class='mylove'>NATALIA</span>! 🎉🎂
-                                                        <br/><span>& Piss on you 💦</span>`;
+        document.getElementById('message').innerHTML = `Happy Birthday <span class='natalia'>NATALIA</span>! 🎉🎂
+                                                        <br/>& <span>Piss on you 💦</span>`;
         intervalConfettiId = setInterval(makeConfetti, 3000);
         makeConfetti()
     }

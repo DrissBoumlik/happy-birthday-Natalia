@@ -6,7 +6,7 @@ body {
     padding-top: 7rem;
     height: 100vh;
     margin: 0;
-    background-image: linear-gradient(0deg, #2a3e5e, #4ecdc4);
+    background-image: linear-gradient(245deg, #222222, #4ecdc4);
     color: white;
     text-align: center;
     overflow: hidden;
@@ -50,8 +50,8 @@ body {
     width: 100%;
 }
 
-.mylove {
-    background-image: linear-gradient(to top, #49bfb6 20%, #00ffc4 80%);
+.natalia {
+    background-image: linear-gradient(to right, #ff2778 20%, #33116c 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
