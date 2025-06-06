@@ -30,9 +30,13 @@ function randomInRange(min, max) {
 
 document.getElementById('cat').addEventListener('click', function boom() {
     offset = 20;
+    document.getElementById('days').textContent = '00';
+    document.getElementById('hours').textContent = '00';
+    document.getElementById('minutes').textContent = '00';
+    document.getElementById('seconds').textContent = '00';
 });
 
-let offset = 0;
+let offset = 2;
 function updateCountdown() {
     // Specific birthday on February 6th
     const now = new Date();

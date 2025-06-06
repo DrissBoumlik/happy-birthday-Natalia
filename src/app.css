@@ -6,7 +6,7 @@ body {
     padding-top: 7rem;
     height: 100vh;
     margin: 0;
-    background-image: linear-gradient(135deg, #000000, #4ecdc4);
+    background-image: linear-gradient(0deg, #2a3e5e, #4ecdc4);
     color: white;
     text-align: center;
     overflow: hidden;
