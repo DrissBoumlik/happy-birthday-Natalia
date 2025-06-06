@@ -30,7 +30,7 @@ function randomInRange(min, max) {
 function updateCountdown() {
     // Specific birthday on February 6th
     const now = new Date();
-    const birthdayDate = new Date(now.getFullYear(), 1, 5, 21, 30, 0); // Note: Month is 0-indexed
+    const birthdayDate = new Date(now.getFullYear(), 5, 7, 0, 0, 0); // Note: Month is 0-indexed
 
     const totalSeconds = (birthdayDate - now) / 1000;
     let days = 0, hours = 0, minutes = 0, seconds = 0;
@@ -50,8 +50,9 @@ function updateCountdown() {
 
     if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
         clearInterval(intervalId);
-        document.getElementById('message').innerHTML = "Happy Birthday <span class='mylove'>GHIZLANE</span>! 🎉🎂";
+        document.getElementById('message').innerHTML = "Happy Birthday <span class='mylove'>NATALIA</span>! 🎉🎂";
         intervalConfettiId = setInterval(makeConfetti, 3000);
+        makeConfetti()
     }
 }
 

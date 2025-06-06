@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    background: linear-gradient(135deg, #000000, #4ecdc4);
     color: white;
     text-align: center;
     overflow: hidden;
@@ -21,6 +21,12 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    span {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
 }
 .time-block {
     margin: 0 10px;
@@ -50,11 +56,12 @@ body {
 }
 
 .mylove {
-    background-image: linear-gradient(to top, #00b4ff 20%, #ff0049 80%);
+    background-image: linear-gradient(to top, #fff500 20%, #00ffc4 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .message {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }

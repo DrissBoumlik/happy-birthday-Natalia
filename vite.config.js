@@ -11,7 +11,7 @@ export default defineConfig({
             input: 'src/index.html',
         },
     },
-    base: '/happy-birthday-gh/',
+    base: '/happy-birthday-natalia/',
     resolve: {
         alias: {
             '@': resolve(__dirname, 'src'),
