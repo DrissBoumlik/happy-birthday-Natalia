@@ -101,6 +101,15 @@
         .balloon2 {
             left: 0;
         }
+        
+        .lazyload, .lazyloading {
+            filter: grayscale(5) blur(5px);
+            transition: filter .4s;
+        }
+
+        .lazyloaded {
+            filter: grayscale(0) blur(0);
+        }
     </style>
 </head>
 
@@ -199,6 +208,7 @@
         }
 
     </script>
+	<script type="module" src="main2.js"></script>
 </body>
 
 </html>
