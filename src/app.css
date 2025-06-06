@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    padding-top: 7rem;
     height: 100vh;
     margin: 0;
     background-image: linear-gradient(135deg, #000000, #4ecdc4);
@@ -21,12 +22,6 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    span {
-        font-size: 3rem;
-    }
-    p {
-        font-size: 1.5rem;
-    }
 }
 .time-block {
     margin: 0 10px;
@@ -56,13 +51,13 @@ body {
 }
 
 .mylove {
-    background-image: linear-gradient(to top, #fff500 20%, #00ffc4 80%);
+    background-image: linear-gradient(to top, #49bfb6 20%, #00ffc4 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .message {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 .balloon {
@@ -75,6 +70,17 @@ body {
     right: 0;
 }
 
-.balloon2 {
+.cat {
+    cursor: pointer;
     left: 0;
+}
+
+.ice {
+    position: absolute;
+    transform: rotate(90deg);
+    bottom: 4rem;
+    width: 180px;
+    img {
+        width: 100%;
+    }
 }
