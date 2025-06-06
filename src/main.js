@@ -29,7 +29,9 @@ function randomInRange(min, max) {
 
 
 document.getElementById('cat').addEventListener('click', function boom() {
+    this.querySelector('img').src = "assets/img/cat2.webp";
     offset = 20;
+    updateCountdown();
     document.getElementById('days').textContent = '00';
     document.getElementById('hours').textContent = '00';
     document.getElementById('minutes').textContent = '00';
