@@ -38,7 +38,7 @@ document.getElementById('cat').addEventListener('click', function boom() {
     document.getElementById('seconds').textContent = '00';
 });
 
-let offset = 2;
+let offset = 0;
 function updateCountdown() {
     // Specific birthday on February 6th
     const now = new Date();
