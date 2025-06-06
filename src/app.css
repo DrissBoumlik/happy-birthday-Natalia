@@ -84,3 +84,12 @@ body {
         width: 100%;
     }
 }
+
+.lazyload, .lazyloading {
+    filter: grayscale(5) blur(5px);
+    transition: filter .4s;
+}
+
+.lazyloaded {
+    filter: grayscale(0) blur(0);
+}
