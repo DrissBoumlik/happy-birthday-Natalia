@@ -101,7 +101,17 @@
         .balloon2 {
             left: 0;
         }
+        
+        .lazyload, .lazyloading {
+            filter: grayscale(5) blur(5px);
+            transition: filter .4s;
+        }
+
+        .lazyloaded {
+            filter: grayscale(0) blur(0);
+        }
     </style>
+  <script type="module" crossorigin src="/natalia-happy-bd/assets/lazysizes-D97NuOfe.js"></script>
 </head>
 
 <body>
@@ -198,7 +208,7 @@
             updateSlidePosition();
         }
 
-    </script>
+    </script>
 </body>
 
 </html>
