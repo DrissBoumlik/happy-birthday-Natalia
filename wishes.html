@@ -30,7 +30,7 @@
             height: 100%;
             display: flex;
             align-items: center;
-            justify-content: center;
+            /* justify-content: center; */
             transition: transform 0.5s ease-in-out;
             width: 100%;
         }
@@ -81,19 +81,19 @@
             background: #574fd6;
         }
         
-.balloon {
-    position: absolute;
-    width: 400px; 
-    height: 650px; 
-    bottom: 0;
-}
-.balloon1 {
-    right: 0;
-}
+        .balloon {
+            position: absolute;
+            width: 400px; 
+            height: 650px; 
+            bottom: 0;
+        }
+        .balloon1 {
+            right: 0;
+        }
 
-.balloon2 {
-    left: 0;
-}
+        .balloon2 {
+            left: 0;
+        }
     </style>
 </head>
 
@@ -114,12 +114,12 @@
                 <div class="name">- Firas</div>
             </div>
             <div class="slide">
-                <div class="message">To a Lovely Soul, like no other.. Wish you all happiness in the world 💖.. Fii
+                <div class="message">To a Lovely Soul, like no other.. Wish you all happiness in the world ❤️.. Fii
                     Binecuvântat! Happy Birthday Natalia! :) Love Pam x</div>
                 <div class="name">- King Pam</div>
             </div>
             <div class="slide">
-                <div class="message">I wish you lots of love 💖, lots of money 💵, I am happy to have the chance to meet
+                <div class="message">I wish you lots of love ❤️, lots of money 💵, I am happy to have the chance to meet
                     you! 😘</div>
                 <div class="name">- Tia</div>
             </div>
@@ -148,7 +148,7 @@
                 <div class="name">- Vishak</div>
             </div>
             <div class="slide">
-                <div class="message">-------- 🎂 <br/>Happy birthday you!</div>
+                <div class="message">"Happy birthday Natalia...wishing you a perfect day and I hope all your dreams come true..Rita ❤️🩷</div>
                 <div class="name">- Ree</div>
             </div>
         </div>
@@ -159,23 +159,29 @@
     </div>
 
     <script>
-        let currentIndex = -3;
+        let currentIndex = 0;
         const slides = document.getElementById('slides');
         const totalSlides = slides.children.length;
         console.log(totalSlides);
         updateSlidePosition()
 
         function updateSlidePosition() {
-            slides.style.transform = 'translateX(' + (-(currentIndex - 1) * 100) + '%)';
+            slides.style.transform = 'translateX(' + -(currentIndex * 100) + '%)';
         }
 
         function nextSlide() {
             currentIndex++;
+            if (currentIndex >= totalSlides - 1) {
+                currentIndex = totalSlides - 1;
+            }
             updateSlidePosition();
         }
 
         function prevSlide() {
             currentIndex--;
+            if (currentIndex <= 0) {
+                currentIndex = 0;
+            }
             updateSlidePosition();
         }
 
